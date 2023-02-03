@@ -6,12 +6,13 @@ body {
     width: 400px;
     max-height: 580px;
     margin: 0;
-    background: linear-gradient(45deg, #29df00, #f30000)
+    padding: 0;
+    background: linear-gradient(45deg, #00df8d, #0e0ae6)
 }
 
 .calculator-grid {
     display: grid;
-    margin: 1rem;
+    margin: 20px;
     justify-content: center;
     grid-template-columns: repeat(4, 5rem);
     grid-template-rows: minmax(7rem, auto) repeat(5, 5rem);

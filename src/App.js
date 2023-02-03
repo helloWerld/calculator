@@ -1,4 +1,3 @@
-import { toBePartiallyChecked } from "@testing-library/jest-dom/dist/matchers";
 import { useReducer } from "react";
 import DigitButton from "./DigitButton";
 import OperationButton from "./OperationButton";
@@ -21,6 +20,9 @@ function reducer(state, { type, payload }) {
           currentOperand: payload.digit,
           overwrite: false
         }
+      }
+      if (state.currentOperand == null && state.previousOperand == null && payload.digit === ".") {
+        return state
       }
       if (payload.digit === "0" && state.currentOperand === "0") {
         return state
